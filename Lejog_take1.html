@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Insert your title tag and write an apporpriate title -->
+    <title>Alpine Canada Huts</title>
+
+    <!-- Leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Leaflet JS (Must come after css) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
+
+    <style>
+        /* set your map container height to height 100% and width 100%
+    
+   
+
+        /* css written for you */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #0b356f;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+
+        }
+
+        .leaflet-control-layers {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            padding: 6px 10px;
+        }
+
+        .leaflet-control-layers-toggle {
+            background-color: white;
+        }
+
+        .leaflet-control-layers-expanded {
+            padding: 6px 10px 6px 6px;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        /* Styles for info panel */
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+        #map {
+            height: 780px;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        h1 {
+
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <h1>Write an appropriate heading for your map</h1> -->
+    <h1> Alpine Canada Huts Map</h1>
+    <!-- insert your map container -->
+    <div id="map"></div>
+    <script>
+        // // construct your Map
+        const map = L.map('map').setView([63, 0], 4);
+        // add your open street map base layer
+        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     maxZoom: 19,
+        //     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        // }).addTo(map);
+
+        // L.tileLayer.provider('OpenTopoMap').addTo(map);
+
+        L.tileLayer.provider('Esri.NatGeoWorldMap').addTo(map);
+
+          // Load GeoJSON
+//   fetch('data/AlpineCanadaHuts22.geojson')
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       var geojsonLayer = L.geoJSON(data).addTo(map);
+
+//       // Zoom to layer
+//       map.fitBounds(geojsonLayer.getBounds());
+//     })
+//     .catch(error => {
+//       console.error('Error loading GeoJSON:', error);
+//     });
+    </script>
+</body>
