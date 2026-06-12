@@ -102,21 +102,21 @@
         L.tileLayer.provider('Esri.NatGeoWorldMap').addTo(map);
 
           // Load GeoJSON
-//   fetch('data/AlpineCanadaHuts22.geojson')
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       var geojsonLayer = L.geoJSON(data).addTo(map);
+  fetch('data/AlpineCanadaHuts26.geojson')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      var geojsonLayer = L.geoJSON(data).addTo(map);
 
-//       // Zoom to layer
-//       map.fitBounds(geojsonLayer.getBounds());
-//     })
-//     .catch(error => {
-//       console.error('Error loading GeoJSON:', error);
-//     });
+      // Zoom to layer
+      map.fitBounds(geojsonLayer.getBounds());
+    })
+    .catch(error => {
+      console.error('Error loading GeoJSON:', error);
+    });
     </script>
 </body>
