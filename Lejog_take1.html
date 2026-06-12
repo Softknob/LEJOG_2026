@@ -102,7 +102,7 @@
         L.tileLayer.provider('Esri.NatGeoWorldMap').addTo(map);
 
           // Load GeoJSON
-  fetch('data/AlpineCanadaHuts26.geojson')
+  fetch('data/Stays.geojson')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
