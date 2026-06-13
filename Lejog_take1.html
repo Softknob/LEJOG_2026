@@ -124,10 +124,10 @@
         },
         onEachFeature: function(feature, layer){
             if(feature.properties){
-                let popupContent='<strong>${feature.properties.Name}</strong><br>'
-            };
-                layer.bindPopup(popupContent);
+                let popupContent=`<strong>${feature.properties.Name}</strong><br>`;
             }
+                layer.bindPopup(popupContent);
+            
         }
       }).addTo(map);
 
