@@ -130,6 +130,24 @@
                 <strong>${feature.properties.Name}</strong><br>
                 <img src="images/${feature.properties.img}" alt="image"
                 style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+                  <table>
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Date</td><td>${formatDateLocale(feature.properties.Arrival_date)}</td></tr>
+                        <tr><td>Cost</td><td>${feature.propertiescost}</td></tr>
+                        <tr><td>Score</td><td>${feature.properties.score__5}</td></tr>
+                        <tr><td>Room</td><td>${feature.properties.room}</td></tr>
+                        <tr><td>Food</td><td>${feature.properties.food}</td></tr>
+                        <tr><td>Bike Storage</td><td>${feature.properties.bike_storage}</td></tr>
+                        <tr><td>comments</td><td>${feature.properties.notes}</td></tr>
+                    </tbody>
+                    </table>
+
                 `;
             }
             else{

@@ -1,4 +1,469 @@
 {
-  "type" : "FeatureCollection",
-  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[-5.550960459999942,50.116336145000048]},"properties":{"OBJECTID":1,"F1":0,"Day":"Sunday","Arrival_date":1777161600000,"Location":"Penzance","Name":"The Pirate Inn","cost":75,"score__5":3,"food":"I ordered a veg lasagna and they brought me a meat pie, they did change it. Breakfast not available","bike_storage":"Inside pod","room":"Nice little pod this was the best bit, A little cold until I found a heater","notes":"I turned up late and they were doing pub bingo and the whole pub was playing, felt very out of place. I had to order food straight away, but got seated in a slightly quiter part of the bar. The accomodation was pods in the grounds of the pub so nice and quiet","web":"https://www.thepirateinn.com/","lat":50.116336144505503,"lon":-5.5509604604920604,"img":"Stay1.jpg"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[-4.747997838999936,50.645726413000034]},"properties":{"OBJECTID":2,"F1":1,"Day":"Monday","Arrival_date":1777248000000,"Location":"Trebarwith","Name":"The Mill House Inn","cost":100,"score__5":4,"food":"I had a curry very nice and filling and Eaton mess for pud which I had never tried before but was absolutely delicious, breakfast was good too","bike_storage":"Outside sheltered inpub garden, but it waas an isolated place so it felt safe","room":"Decent room in old building up a lot of steps and windy coridoors","notes":"Friendly staff good food, we should have visited it before when we stayed in Trebarwith Strand","web":"http://www.themillhouseinn.co.uk/","lat":50.645726413480901,"lon":-4.7479978386499404,"img":"Stay2.jpg"}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[-3.8030126859999314,51.054077704000065]},"properties":{"OBJECTID":3,"F1":2,"Day":"Tuesday","Arrival_date":1777334400000,"Location":"North Molton","Name":"The Poltimore Inn","cost":80,"score__5":3.5,"food":"I was so beat I ordered a meat quiche (lorraine) by mistate but eat it any way","bike_storage":"The bar lady said her father had run a bike shop so she understood bikes and let me keep it in my room, even carried it up the stairs for me","room":"Nice room overlooking street","notes":"Very much a locals pub with people coming home from work for a drink, noisy till closing meant I couldn't sleep very well. Some confusion over whether I had paid already. Saw some walkers who were on a multi day trek","web":"https://www.thepoltimoreinnnorthmolton.co.uk/","lat":51.054077704053398,"lon":-3.8030126855989801,"img":"Stay3.jpg"}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[-3.0101813589999438,51.29819012300004]},"properties":{"OBJECTID":4,"F1":3,"Day":"Wednesday","Arrival_date":1777420800000,"Location":"Brean","Name":"The Old Rectory","cost":90,"score__5":3.5,"food":"Breakfast was OK in big glass conservatory. No evening meal had to go to campsite pub where I got an awfull pizza","bike_storage":"In husbands garage - very helpful","room":"Nice little semi cottage, quiet, good sleep","notes":"Breen is an awfull holiday camp hell, this was the only old building in the place, on the other side of the dunes is a beautiful huge white sand beach thjat is inspoilt","web":"https://www.oldrectorybrean.co.uk/","lat":51.298190122832999,"lon":-3.0101813586117601,"img":"Stay4.jpg"}},{"type":"Feature","id":5,"geometry":{"type":"Point","coordinates":[-3.1245847299999809,52.074455019000027]},"properties":{"OBJECTID":5,"F1":4,"Day":"Thursday","Arrival_date":1777507200000,"Location":"Hay on Wye","Name":"Kilverts Inn","cost":105,"score__5":4,"food":"Vegi buger was a bit squishy, breakfast OK","bike_storage":"Ouside, covered","room":"Room fine in old historic buidling with lots of character","notes":"Met Andrew on this one, turned up at 7pm and was very tired","web":"https://kilverts.co.uk/","lat":52.074455019336298,"lon":-3.1245847297581499,"img":"Stay5.jpg"}},{"type":"Feature","id":6,"geometry":{"type":"Point","coordinates":[-2.8932967429999508,52.907501549000074]},"properties":{"OBJECTID":6,"F1":5,"Day":"Friday","Arrival_date":1777593600000,"Location":"Ellesmere","Name":"Ellesmere Hotel","cost":100,"score__5":3,"food":"No food, went the Thai next door for supper, which was very good and spoke to some freindlt people, breakfast I found a nice local café, run by a sour faced cheshire type","bike_storage":"Inside room","room":"Room a very long way from bar, but that is a good thing","notes":"Histoic hotel that was a bit tired, no food, but they were having a karaoke competion","web":"https://ellesmerehotel.co.uk/","lat":52.907501549202003,"lon":-2.8932967432304699,"img":"Stay6.jpg"}},{"type":"Feature","id":7,"geometry":{"type":"Point","coordinates":[-2.6006415169999286,53.686164145000077]},"properties":{"OBJECTID":7,"F1":6,"Day":"Saturday","Arrival_date":1777680000000,"Location":"Wheelton","Name":"The Dressers Arms","cost":85,"score__5":3.5,"food":"busy bar, got supper early was OK. No breakfast found chichi café near by with nice views over the valley - very cheshire","bike_storage":"Outside  in aprivate yard of pub","room":"More modern, newere furnishings","notes":"Busy country pub for Manchester and surounding areas not very friendly","web":"https://www.dressersarms.co.uk/","lat":53.686164144807499,"lon":-2.6006415170852999,"img":"Stay7.jpg"}},{"type":"Feature","id":8,"geometry":{"type":"Point","coordinates":[-2.8960217569999713,54.33429747200006]},"properties":{"OBJECTID":8,"F1":7,"Day":"Sunday","Arrival_date":1777766400000,"Location":"Nr Bowness","Name":"The Brown Horse","cost":120,"score__5":5,"food":"Oustanding, best veg meal ever? Vegetarian roast dinner - huge portion abd lovely pannecotta for desert. Brekfast good too","bike_storage":"coverred in outbuilding","room":"Nice room in old inn, view overlooking countryside","notes":"I didn't get the warmest welcome as they were turning people away  (a bit snobb), but once they knew I had a room booked were much nicer - hosts daughter was living in Whistler","web":"https://www.thebrownhorseinn.co.uk/","lat":54.334297471655297,"lon":-2.8960217566889499,"img":"Stay8.jpg"}},{"type":"Feature","id":9,"geometry":{"type":"Point","coordinates":[-3.5933931699999562,55.052526391000072]},"properties":{"OBJECTID":9,"F1":8,"Day":"Monday","Arrival_date":1777852800000,"Location":"Dumfries","Name":"Holiday Inn","cost":105,"score__5":3,"food":"Meal was nothing special, breakfast was buffet so I could really load up","bike_storage":"In room","room":"Modern, chain sort of room","notes":"Nice old building for meals but rooms in modern add on, very warm through the glass","web":"https://www.ihg.com/holidayinn/hotels/us/en/dumfries/caxdm/hoteldetail","lat":55.052526391357198,"lon":-3.5933931701633299,"img":"Stay9.jpg"}},{"type":"Feature","id":10,"geometry":{"type":"Point","coordinates":[-4.8602629279999405,55.683355481000035]},"properties":{"OBJECTID":10,"F1":9,"Day":"Tuesday","Arrival_date":1777939200000,"Location":"Seamill","Name":"Carlton","cost":100,"score__5":0,"food":"No meal so I went to the restauraunt next doot very good but expensive golfer sort of place lovely views of beach and acreood the warter to Arran.Breakfast was a gong show I had arranged it for 8am so as to lweave by 8:30 to catch the ferry and the woman ","bike_storage":"Outside in bak garden","room":"50s décor, stunk of damp, only had vanilla flavoured coffee creamer","notes":"A very stinky house ran by an even stikier lady, could get out of there quick enough, slept in my clother with all the windows open just like the film Misery","web":"https://www.carlton-seamill.co.uk/","lat":55.6833554813755,"lon":-4.8602629278214202,"img":"Stay10.jpg"}},{"type":"Feature","id":11,"geometry":{"type":"Point","coordinates":[-5.4481537579999326,56.018930966000028]},"properties":{"OBJECTID":11,"F1":10,"Day":"Wednesday","Arrival_date":1778025600000,"Location":"Adrishaig","Name":"Grey Gull","cost":100,"score__5":1,"food":"Lorry driver café type food, it was curry night, so I got a curry not too bad. The breakfast was weird I swear the suasage was not vegtarian as it held together too well and I had some sort of empty pakora","bike_storage":"Outside at back of pub","room":"modern more recently re done","notes":"They emailed me in the morning to say that theyhad a problem with the boiler and I could cancel if I wished.  I turned up any way to see if the boiler was fixed which it wasn't. I tried to book elsewhere, but all full so I had to take this place and have a sponge bath with water heated in the kettle. also do washing in sink with kettle water. on leaving I asked if there would be a discount for no water and was refused ","web":"https://www.thegreygull.co.uk/","lat":56.018930966343703,"lon":-5.4481537581831097,"img":"Stay11.jpg"}},{"type":"Feature","id":12,"geometry":{"type":"Point","coordinates":[-5.2161807159999398,56.702677903000051]},"properties":{"OBJECTID":12,"F1":11,"Day":"Thursday","Arrival_date":1778112000000,"Location":"Onich","Name":"Onich Hotel","cost":98,"score__5":3.5,"food":"Nice supper and brekfast in diner overlooking the loch","bike_storage":"Outside against a tree","room":"Small box room in staff quarters very noisy with staff coming in late after shift and starting very early for breakfast","notes":"Not much atmosphere about this place and a crappy room with single bed but at least it had hot water","web":"https://www.onichhotel.co.uk/","lat":56.702677902734898,"lon":-5.2161807161609497,"img":"Stay12.jpg"}},{"type":"Feature","id":13,"geometry":{"type":"Point","coordinates":[-4.2371934599999577,57.469594940000036]},"properties":{"OBJECTID":13,"F1":12,"Day":"Friday","Arrival_date":1778198400000,"Location":"Inverness","Name":"Park Guest House","cost":108,"score__5":3.5,"food":"breakfast OK but, it a bit small (no egg, I think they thought I was vegan). No evening meal, but walked in to town and got a noce middle eastern meal on recommendartion of host","bike_storage":"inside downstairs","room":"a bit clutterd and date, no ensuite shated bathroom OK, but peeing in the night a little awkward ","notes":"more of a guest house, friendly cross table chatting a breakfast all US or Canadian visitors","web":"https://parkguesthouseinverness.co.uk/","lat":57.469594939527703,"lon":-4.23719346032453,"img":"Stay13.jpg"}},{"type":"Feature","id":14,"geometry":{"type":"Point","coordinates":[-4.4422397549999459,58.281536412000037]},"properties":{"OBJECTID":14,"F1":13,"Day":"Saturday","Arrival_date":1778284800000,"Location":"Altnaharra","Name":"Altnaharra Hotel","cost":157,"score__5":3.5,"food":"Food OK, no vegatarian options on menu, but a vegi pasta was provided","bike_storage":"covered in outbuilding","room":"nice a bit of old luxury with a bath, but feeling a little tired","notes":"Run by a camp french dude that did everything a bit of a strange vibe","web":"https://altnaharra.com/","lat":58.2815364122985,"lon":-4.4422397547417196,"img":"Stay14.jpg"}},{"type":"Feature","id":15,"geometry":{"type":"Point","coordinates":[-3.068785605999949,58.638829940000051]},"properties":{"OBJECTID":15,"F1":14,"Day":"Sunday","Arrival_date":1778371200000,"Location":"JOG","Name":"Seaview Hotel","cost":110,"score__5":2.5,"food":"Food OK nothing to shout about","bike_storage":"In garage, but I was told I would have to share with 11 other cyclist that I never saw, somebody parked up right against the door and I was told they would be gone by 7am and they werent, but fortuenatetly I could get thrugh the other garage to retrieve m","room":"bunk house type room the tinest TV I have ever seen, fron door would not close  and blowing a gale, could only get luke warm water for a shower","notes":null,"web":"https://seaviewjohnogroats.co.uk/","lat":58.638829940064603,"lon":-3.0687856064401302,"img":"Stay15.jpg"}},{"type":"Feature","id":16,"geometry":{"type":"Point","coordinates":[-2.9716268849999778,58.999126779000051]},"properties":{"OBJECTID":16,"F1":15,"Day":"Monday","Arrival_date":1778457600000,"Location":"Ferry","Name":"North Link Ferries","cost":211,"score__5":4.5,"food":"Great brekfast buffet in luxury lounge","bike_storage":"in hold","room":"Lovely  bijoux cabin twin beds and a shower clean with porthole to watch the sea, could here the car alarms going off to start with but they shut up after about 30 min","notes":"After the long wait in the terminal this waas a touch of luxury. I didn't want to leave and they had emptied the car deck before I went to get my bike","web":"https://www.northlinkferries.co.uk/","lat":58.999126779319397,"lon":-2.9716268846785798,"img":"Stay16.jpg"}}]
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.550960459999942,
+                    50.11633614500005
+                ]
+            },
+            "properties": {
+                "OBJECTID": 1,
+                "F1": 0,
+                "Day": "Sunday",
+                "Arrival_date": 1777161600000,
+                "Location": "Penzance",
+                "Name": "The Pirate Inn",
+                "cost": 75,
+                "score__5": 3,
+                "food": "I ordered a veg lasagna and they brought me a meat pie, they did change it. Breakfast not available",
+                "bike_storage": "Inside pod",
+                "room": "Nice little pod this was the best bit, A little cold until I found a heater",
+                "notes": "I turned up late and they were doing pub bingo and the whole pub was playing, felt very out of place. I had to order food straight away, but got seated in a slightly quiter part of the bar. The accomodation was pods in the grounds of the pub so nice and quiet",
+                "web": "https://www.thepirateinn.com/",
+                "lat": 50.1163361445055,
+                "lon": -5.55096046049206,
+                "img": "Stay1.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.747997838999936,
+                    50.645726413000034
+                ]
+            },
+            "properties": {
+                "OBJECTID": 2,
+                "F1": 1,
+                "Day": "Monday",
+                "Arrival_date": 1777248000000,
+                "Location": "Trebarwith",
+                "Name": "The Mill House Inn",
+                "cost": 100,
+                "score__5": 4,
+                "food": "I had a curry very nice and filling and Eaton mess for pud which I had never tried before but was absolutely delicious, breakfast was good too",
+                "bike_storage": "Outside sheltered inpub garden, but it waas an isolated place so it felt safe",
+                "room": "Decent room in old building up a lot of steps and windy coridoors",
+                "notes": "Friendly staff good food, we should have visited it before when we stayed in Trebarwith Strand",
+                "web": "http://www.themillhouseinn.co.uk/",
+                "lat": 50.6457264134809,
+                "lon": -4.74799783864994,
+                "img": "Stay2.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.8030126859999314,
+                    51.054077704000065
+                ]
+            },
+            "properties": {
+                "OBJECTID": 3,
+                "F1": 2,
+                "Day": "Tuesday",
+                "Arrival_date": 1777334400000,
+                "Location": "North Molton",
+                "Name": "The Poltimore Inn",
+                "cost": 80,
+                "score__5": 3.5,
+                "food": "I was so beat I ordered a meat quiche (lorraine) by mistate but eat it any way",
+                "bike_storage": "The bar lady said her father had run a bike shop so she understood bikes and let me keep it in my room, even carried it up the stairs for me",
+                "room": "Nice room overlooking street",
+                "notes": "Very much a locals pub with people coming home from work for a drink, noisy till closing meant I couldn't sleep very well. Some confusion over whether I had paid already. Saw some walkers who were on a multi day trek",
+                "web": "https://www.thepoltimoreinnnorthmolton.co.uk/",
+                "lat": 51.0540777040534,
+                "lon": -3.80301268559898,
+                "img": "Stay3.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.0101813589999438,
+                    51.29819012300004
+                ]
+            },
+            "properties": {
+                "OBJECTID": 4,
+                "F1": 3,
+                "Day": "Wednesday",
+                "Arrival_date": 1777420800000,
+                "Location": "Brean",
+                "Name": "The Old Rectory",
+                "cost": 90,
+                "score__5": 3.5,
+                "food": "Breakfast was OK in big glass conservatory. No evening meal had to go to campsite pub where I got an awfull pizza",
+                "bike_storage": "In husbands garage - very helpful",
+                "room": "Nice little semi cottage, quiet, good sleep",
+                "notes": "Breen is an awfull holiday camp hell, this was the only old building in the place, on the other side of the dunes is a beautiful huge white sand beach thjat is inspoilt",
+                "web": "https://www.oldrectorybrean.co.uk/",
+                "lat": 51.298190122833,
+                "lon": -3.01018135861176,
+                "img": "Stay4.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.124584729999981,
+                    52.07445501900003
+                ]
+            },
+            "properties": {
+                "OBJECTID": 5,
+                "F1": 4,
+                "Day": "Thursday",
+                "Arrival_date": 1777507200000,
+                "Location": "Hay on Wye",
+                "Name": "Kilverts Inn",
+                "cost": 105,
+                "score__5": 4,
+                "food": "Vegi buger was a bit squishy, breakfast OK",
+                "bike_storage": "Ouside, covered",
+                "room": "Room fine in old historic buidling with lots of character",
+                "notes": "Met Andrew on this one, turned up at 7pm and was very tired",
+                "web": "https://kilverts.co.uk/",
+                "lat": 52.0744550193363,
+                "lon": -3.12458472975815,
+                "img": "Stay5.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.8932967429999508,
+                    52.907501549000074
+                ]
+            },
+            "properties": {
+                "OBJECTID": 6,
+                "F1": 5,
+                "Day": "Friday",
+                "Arrival_date": 1777593600000,
+                "Location": "Ellesmere",
+                "Name": "Ellesmere Hotel",
+                "cost": 100,
+                "score__5": 3,
+                "food": "No food, went the Thai next door for supper, which was very good and spoke to some freindlt people, breakfast I found a nice local café, run by a sour faced cheshire type",
+                "bike_storage": "Inside room",
+                "room": "Room a very long way from bar, but that is a good thing",
+                "notes": "Histoic hotel that was a bit tired, no food, but they were having a karaoke competion",
+                "web": "https://ellesmerehotel.co.uk/",
+                "lat": 52.907501549202,
+                "lon": -2.89329674323047,
+                "img": "Stay6.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.6006415169999286,
+                    53.68616414500008
+                ]
+            },
+            "properties": {
+                "OBJECTID": 7,
+                "F1": 6,
+                "Day": "Saturday",
+                "Arrival_date": 1777680000000,
+                "Location": "Wheelton",
+                "Name": "The Dressers Arms",
+                "cost": 85,
+                "score__5": 3.5,
+                "food": "busy bar, got supper early was OK. No breakfast found chichi café near by with nice views over the valley - very cheshire",
+                "bike_storage": "Outside  in aprivate yard of pub",
+                "room": "More modern, newere furnishings",
+                "notes": "Busy country pub for Manchester and surounding areas not very friendly",
+                "web": "https://www.dressersarms.co.uk/",
+                "lat": 53.6861641448075,
+                "lon": -2.6006415170853,
+                "img": "Stay7.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.8960217569999713,
+                    54.33429747200006
+                ]
+            },
+            "properties": {
+                "OBJECTID": 8,
+                "F1": 7,
+                "Day": "Sunday",
+                "Arrival_date": 1777766400000,
+                "Location": "Nr Bowness",
+                "Name": "The Brown Horse",
+                "cost": 120,
+                "score__5": 5,
+                "food": "Oustanding, best veg meal ever? Vegetarian roast dinner - huge portion abd lovely pannecotta for desert. Brekfast good too",
+                "bike_storage": "coverred in outbuilding",
+                "room": "Nice room in old inn, view overlooking countryside",
+                "notes": "I didn't get the warmest welcome as they were turning people away  (a bit snobb), but once they knew I had a room booked were much nicer - hosts daughter was living in Whistler",
+                "web": "https://www.thebrownhorseinn.co.uk/",
+                "lat": 54.3342974716553,
+                "lon": -2.89602175668895,
+                "img": "Stay8.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.593393169999956,
+                    55.05252639100007
+                ]
+            },
+            "properties": {
+                "OBJECTID": 9,
+                "F1": 8,
+                "Day": "Monday",
+                "Arrival_date": 1777852800000,
+                "Location": "Dumfries",
+                "Name": "Holiday Inn",
+                "cost": 105,
+                "score__5": 3,
+                "food": "Meal was nothing special, breakfast was buffet so I could really load up",
+                "bike_storage": "In room",
+                "room": "Modern, chain sort of room",
+                "notes": "Nice old building for meals but rooms in modern add on, very warm through the glass",
+                "web": "https://www.ihg.com/holidayinn/hotels/us/en/dumfries/caxdm/hoteldetail",
+                "lat": 55.0525263913572,
+                "lon": -3.59339317016333,
+                "img": "Stay9.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.8602629279999405,
+                    55.683355481000035
+                ]
+            },
+            "properties": {
+                "OBJECTID": 10,
+                "F1": 9,
+                "Day": "Tuesday",
+                "Arrival_date": 1777939200000,
+                "Location": "Seamill",
+                "Name": "Carlton",
+                "cost": 100,
+                "score__5": 0,
+                "food": "No meal so I went to the restauraunt next doot very good but expensive golfer sort of place lovely views of beach and acreood the warter to Arran.Breakfast was a gong show I had arranged it for 8am so as to lweave by 8:30 to catch the ferry and the woman ",
+                "bike_storage": "Outside in bak garden",
+                "room": "50s décor, stunk of damp, only had vanilla flavoured coffee creamer",
+                "notes": "A very stinky house ran by an even stikier lady, could get out of there quick enough, slept in my clother with all the windows open just like the film Misery",
+                "web": "https://www.carlton-seamill.co.uk/",
+                "lat": 55.6833554813755,
+                "lon": -4.86026292782142,
+                "img": "Stay10.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.448153757999933,
+                    56.01893096600003
+                ]
+            },
+            "properties": {
+                "OBJECTID": 11,
+                "F1": 10,
+                "Day": "Wednesday",
+                "Arrival_date": 1778025600000,
+                "Location": "Adrishaig",
+                "Name": "Grey Gull",
+                "cost": 100,
+                "score__5": 1,
+                "food": "Lorry driver café type food, it was curry night, so I got a curry not too bad. The breakfast was weird I swear the suasage was not vegtarian as it held together too well and I had some sort of empty pakora",
+                "bike_storage": "Outside at back of pub",
+                "room": "modern more recently re done",
+                "notes": "They emailed me in the morning to say that theyhad a problem with the boiler and I could cancel if I wished.  I turned up any way to see if the boiler was fixed which it wasn't. I tried to book elsewhere, but all full so I had to take this place and have a sponge bath with water heated in the kettle. also do washing in sink with kettle water. on leaving I asked if there would be a discount for no water and was refused ",
+                "web": "https://www.thegreygull.co.uk/",
+                "lat": 56.0189309663437,
+                "lon": -5.44815375818311,
+                "img": "Stay11.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 12,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.21618071599994,
+                    56.70267790300005
+                ]
+            },
+            "properties": {
+                "OBJECTID": 12,
+                "F1": 11,
+                "Day": "Thursday",
+                "Arrival_date": 1778112000000,
+                "Location": "Onich",
+                "Name": "Onich Hotel",
+                "cost": 98,
+                "score__5": 3.5,
+                "food": "Nice supper and brekfast in diner overlooking the loch",
+                "bike_storage": "Outside against a tree",
+                "room": "Small box room in staff quarters very noisy with staff coming in late after shift and starting very early for breakfast",
+                "notes": "Not much atmosphere about this place and a crappy room with single bed but at least it had hot water",
+                "web": "https://www.onichhotel.co.uk/",
+                "lat": 56.7026779027349,
+                "lon": -5.21618071616095,
+                "img": "Stay12.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.237193459999958,
+                    57.469594940000036
+                ]
+            },
+            "properties": {
+                "OBJECTID": 13,
+                "F1": 12,
+                "Day": "Friday",
+                "Arrival_date": 1778198400000,
+                "Location": "Inverness",
+                "Name": "Park Guest House",
+                "cost": 108,
+                "score__5": 3.5,
+                "food": "breakfast OK but, it a bit small (no egg, I think they thought I was vegan). No evening meal, but walked in to town and got a noce middle eastern meal on recommendartion of host",
+                "bike_storage": "inside downstairs",
+                "room": "a bit clutterd and date, no ensuite shated bathroom OK, but peeing in the night a little awkward ",
+                "notes": "more of a guest house, friendly cross table chatting a breakfast all US or Canadian visitors",
+                "web": "https://parkguesthouseinverness.co.uk/",
+                "lat": 57.4695949395277,
+                "lon": -4.23719346032453,
+                "img": "Stay13.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 14,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.442239754999946,
+                    58.28153641200004
+                ]
+            },
+            "properties": {
+                "OBJECTID": 14,
+                "F1": 13,
+                "Day": "Saturday",
+                "Arrival_date": 1778284800000,
+                "Location": "Altnaharra",
+                "Name": "Altnaharra Hotel",
+                "cost": 157,
+                "score__5": 3.5,
+                "food": "Food OK, no vegatarian options on menu, but a vegi pasta was provided",
+                "bike_storage": "covered in outbuilding",
+                "room": "nice a bit of old luxury with a bath, but feeling a little tired",
+                "notes": "Run by a camp french dude that did everything a bit of a strange vibe",
+                "web": "https://altnaharra.com/",
+                "lat": 58.2815364122985,
+                "lon": -4.44223975474172,
+                "img": "Stay14.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.068785605999949,
+                    58.63882994000005
+                ]
+            },
+            "properties": {
+                "OBJECTID": 15,
+                "F1": 14,
+                "Day": "Sunday",
+                "Arrival_date": 1778371200000,
+                "Location": "JOG",
+                "Name": "Seaview Hotel",
+                "cost": 110,
+                "score__5": 2.5,
+                "food": "Food OK nothing to shout about",
+                "bike_storage": "In garage, but I was told I would have to share with 11 other cyclist that I never saw, somebody parked up right against the door and I was told they would be gone by 7am and they werent, but fortuenatetly I could get thrugh the other garage to retrieve m",
+                "room": "bunk house type room the tinest TV I have ever seen, fron door would not close  and blowing a gale, could only get luke warm water for a shower",
+                "notes": null,
+                "web": "https://seaviewjohnogroats.co.uk/",
+                "lat": 58.6388299400646,
+                "lon": -3.06878560644013,
+                "img": "Stay15.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 16,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.971626884999978,
+                    58.99912677900005
+                ]
+            },
+            "properties": {
+                "OBJECTID": 16,
+                "F1": 15,
+                "Day": "Monday",
+                "Arrival_date": 1778457600000,
+                "Location": "Ferry",
+                "Name": "North Link Ferries",
+                "cost": 211,
+                "score__5": 4.5,
+                "food": "Great brekfast buffet in luxury lounge",
+                "bike_storage": "in hold",
+                "room": "Lovely  bijoux cabin twin beds and a shower clean with porthole to watch the sea, could here the car alarms going off to start with but they shut up after about 30 min",
+                "notes": "After the long wait in the terminal this waas a touch of luxury. I didn't want to leave and they had emptied the car deck before I went to get my bike",
+                "web": "https://www.northlinkferries.co.uk/",
+                "lat": 58.9991267793194,
+                "lon": -2.97162688467858,
+                "img": "Stay16.jpg"
+            }
+        }
+    ]
 }
