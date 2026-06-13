@@ -89,6 +89,12 @@
     <!-- insert your map container -->
     <div id="map"></div>
     <script>
+
+        function formatDateLocale(timestamp) {
+            const date = new Date(Number(timestamp));
+            // 'en-GB' format defaults natively to Day/Month/Year
+            return date.toLocaleDateString('en-GB');
+        }
         // // construct your Map
         const map = L.map('map').setView([55, -2], 6);
         // add your open street map base layer
@@ -101,32 +107,32 @@
 
         L.tileLayer.provider('Esri.NatGeoWorldMap').addTo(map);
 
-        var roomIcon=L.icon({
-            iconUrl:"images/noun-hotel-2673741.svg", 
-            iconSize:[20,20],
-            iconAnchor:[10,10],
-            popupAnchor:[0,0]
+        var roomIcon = L.icon({
+            iconUrl: "images/noun-hotel-2673741.svg",
+            iconSize: [20, 20],
+            iconAnchor: [10, 10],
+            popupAnchor: [0, 0]
 
         });
 
-          // Load GeoJSON
-  fetch('data/Stays.geojson')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      var geojsonLayer = L.geoJSON(data,{
-        pointToLayer: function (feature, latlng){
-            return L.marker(latlng, {icon:roomIcon});
-        },
-        onEachFeature: function(feature, layer){
-            let popupContent="";
+        // Load GeoJSON
+        fetch('data/Stays.geojson')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                var geojsonLayer = L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, { icon: roomIcon });
+                    },
+                    onEachFeature: function (feature, layer) {
+                        let popupContent = "";
 
-            if(feature.properties && feature.properties.Name){
-                popupContent=`
+                        if (feature.properties && feature.properties.Name) {
+                            popupContent = `
                 <strong>${feature.properties.Name}</strong><br>
                 <img src="images/${feature.properties.img}" alt="image"
                 style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
@@ -149,39 +155,39 @@
                     </table>
 
                 `;
-            }
-            else{
-                popupContent = `<strong>Unnamed Stay</strong>`;
+                        }
+                        else {
+                            popupContent = `<strong>Unnamed Stay</strong>`;
 
-            }
-                layer.bindPopup(popupContent);
-            
-        }
-      }).addTo(map);
+                        }
+                        layer.bindPopup(popupContent);
 
-      // Zoom to layer
-      map.fitBounds(geojsonLayer.getBounds());
-    })
-    .catch(error => {
-      console.error('Error loading GeoJSON:', error);
-    });
+                    }
+                }).addTo(map);
+
+                // Zoom to layer
+                map.fitBounds(geojsonLayer.getBounds());
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON:', error);
+            });
 
 
-    fetch('data/days.geojson')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      var geojsonLayer = L.geoJSON(data).addTo(map);
+        fetch('data/days.geojson')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                var geojsonLayer = L.geoJSON(data).addTo(map);
 
-      // Zoom to layer
-      map.fitBounds(geojsonLayer.getBounds());
-    })
-    .catch(error => {
-      console.error('Error loading GeoJSON:', error);
-    });
+                // Zoom to layer
+                map.fitBounds(geojsonLayer.getBounds());
+            })
+            .catch(error => {
+                console.error('Error loading GeoJSON:', error);
+            });
     </script>
 </body>
