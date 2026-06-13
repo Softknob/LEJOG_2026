@@ -118,7 +118,11 @@
       return response.json();
     })
     .then(data => {
-      var geojsonLayer = L.geoJSON(data).addTo(map);
+      var geojsonLayer = L.geoJSON(data,{
+        pointToLayer: function (feature, latlng){
+            return L.marker(latlng, {icon:roomIcon});
+        }
+      }).addTo(map);
 
       // Zoom to layer
       map.fitBounds(geojsonLayer.getBounds());
