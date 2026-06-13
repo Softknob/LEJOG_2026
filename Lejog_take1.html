@@ -121,6 +121,13 @@
       var geojsonLayer = L.geoJSON(data,{
         pointToLayer: function (feature, latlng){
             return L.marker(latlng, {icon:roomIcon});
+        },
+        onEachFeature: function(feature, layer){
+            if(feature.properties){
+                let popupContent='<strong>${feature.properties.Name}</strong><br>'
+            };
+                layer.bindPopup(popupContent);
+            }
         }
       }).addTo(map);
 
