@@ -265,6 +265,21 @@
                     pointToLayer: function (feature, latlng) {
                         return L.marker(latlng, { icon: roomIcon });
                     },
+                    // 2. Attach the click event to each marker instance
+                    onEachFeature: function (feature, layer) {
+                        layer.on('click', function (e) {
+                            // Read properties straight from your GeoJSON feature data
+                            var name = feature.properties.name || "Unknown Location";
+                            var description = feature.properties.description || "No description available.";
+
+                            // Build the HTML content dynamically
+                            var content = "<h3>" + name + "</h3><p>" + description + "</p>";
+
+                            // Inject content into your sidebar element and open it
+                            document.getElementById('sidebar-dynamic-content').innerHTML = content;
+                            sidebar.open('info-tab');
+                        });
+                    }
                 }).addTo(map);
 
                 // Zoom to layer
