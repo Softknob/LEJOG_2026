@@ -121,6 +121,28 @@
             margin-bottom: 8px;
             border-radius: 4px;
         }
+
+        /* Container arrangement layout */
+.star-rating-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px; /* Clean spacing between star elements */
+}
+
+/* Base structural sizing for star nodes */
+.star-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Colour definitions */
+.star-icon.full {
+  fill: #ffc107; /* Bright gold fill */
+}
+
+.star-icon.empty {
+  fill: #e0e0e0; /* Clean light grey placeholder fill */
+}
     </style>
 </head>
 
@@ -137,6 +159,46 @@
             // 'en-GB' format defaults natively to Day/Month/Year
             return date.toLocaleDateString('en-GB');
         }
+
+function getHalfStarRating(score) {
+  const num = parseFloat(score) || 0;
+  // Clamp score strictly between 0 and 5
+  const finalScore = Math.max(0, Math.min(5, num)); 
+  let starContainer = '<div class="star-rating-wrapper">';
+
+  for (let i = 1; i <= 5; i++) {
+    if (finalScore >= i) {
+      // 1. Full Star SVG
+      starContainer += `
+        <svg class="star-icon full" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>`;
+    } else if (finalScore >= i - 0.5) {
+      // 2. True Half Star SVG using an internal linear gradient
+      starContainer += `
+        <svg class="star-icon half" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="halfGrad">
+              <stop offset="50%" stop-color="#ffc107" />
+              <stop offset="50%" stop-color="#e0e0e0" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#halfGrad)" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>`;
+    } else {
+      // 3. Empty Star SVG
+      starContainer += `
+        <svg class="star-icon empty" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>`;
+    }
+  }
+
+  starContainer += '</div>';
+  return starContainer;
+}
+
+
         // // construct your Map
         const map = L.map('map').setView([55, -2], 6);
         // add your open street map base layer
@@ -187,8 +249,8 @@
                     </thead>
                     <tbody>
                         <tr><td>Date</td><td>${formatDateLocale(feature.properties.Arrival_date)}</td></tr>
-                        <tr><td>Cost</td><td>${feature.propertiescost}</td></tr>
-                        <tr><td>Score</td><td>${feature.properties.score__5}</td></tr>
+                        <tr><td>Cost</td><td>${feature.properties.cost}</td></tr>
+                        <tr><td>Score</td><td>${getHalfStarRating(feature.properties.score__5)}</td></tr>
                         <tr><td>Room</td><td>${feature.properties.room}</td></tr>
                         <tr><td>Food</td><td>${feature.properties.food}</td></tr>
                         <tr><td>Bike Storage</td><td>${feature.properties.bike_storage}</td></tr>
@@ -204,7 +266,7 @@
                         }
                         layer.bindPopup(popupContent, {
                             className: 'desktop-popup',   // Ties layout parameters to your CSS styles
-                            maxHeight: 300,               // Caps the vertical frame boundary limits
+                            maxHeight: 600,               // Caps the vertical frame boundary limits
                             autoPan: true,                // Keeps markers viewable on screen
                             autoPanPadding: L.point(10, 50), // Allocates a 50px buffer zone at the browser top edge
                             keepInView: true              // Keeps popup locked within active bounds
