@@ -161,20 +161,25 @@
     <!-- <h1>Write an appropriate heading for your map</h1> -->
     <h1>LEJOG 2026 Story Map</h1>
     <!-- Sidebar Container -->
-    <div id="sidebar" class="sidebar collapsed">
-        <!-- Tabs navigation -->
-        <div class="sidebar-tabs">
+    <!-- 1. Changed class to "leaflet-sidebar" -->
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+
+        <!-- 2. Changed class to "leaflet-sidebar-tabs" -->
+        <div class="leaflet-sidebar-tabs">
             <ul role="tablist">
                 <li><a href="#info-tab" role="tab"><i class="fa fa-info"></i></a></li>
             </ul>
         </div>
 
-        <!-- Tab content panes -->
-        <div class="sidebar-content">
-            <div class="sidebar-pane" id="info-tab">
-                <h1 class="sidebar-header">
+        <!-- 3. Changed class to "leaflet-sidebar-content" -->
+        <div class="leaflet-sidebar-content">
+            <!-- 4. Changed class to "leaflet-sidebar-pane" -->
+            <div class="leaflet-sidebar-pane" id="info-tab">
+                <!-- 5. Changed class to "leaflet-sidebar-header" -->
+                <h1 class="leaflet-sidebar-header">
                     Location Details
-                    <div class="sidebar-close"><i class="fa fa-caret-left"></i></div>
+                    <!-- 6. Changed class to "leaflet-sidebar-close" -->
+                    <div class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></div>
                 </h1>
                 <!-- This container will hold your dynamic popup content -->
                 <div id="sidebar-dynamic-content">
@@ -183,6 +188,7 @@
             </div>
         </div>
     </div>
+
     <!-- insert your map container -->
     <div id="map"></div>
     <script>
