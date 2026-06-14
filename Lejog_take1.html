@@ -89,7 +89,7 @@
         .desktop-popup .leaflet-popup-content {
             width: 450px !important;
             /* Wider canvas ideal for structured data columns */
-            max-height: 300px;
+            max-height: 600px;
             /* Strict cap to prevent extending past screen edge */
             overflow-y: auto;
             /* Forces vertical scrollbar when contents overflow */
@@ -123,26 +123,29 @@
         }
 
         /* Container arrangement layout */
-.star-rating-wrapper {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px; /* Clean spacing between star elements */
-}
+        .star-rating-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            /* Clean spacing between star elements */
+        }
 
-/* Base structural sizing for star nodes */
-.star-icon {
-  width: 16px;
-  height: 16px;
-}
+        /* Base structural sizing for star nodes */
+        .star-icon {
+            width: 16px;
+            height: 16px;
+        }
 
-/* Colour definitions */
-.star-icon.full {
-  fill: #ffc107; /* Bright gold fill */
-}
+        /* Colour definitions */
+        .star-icon.full {
+            fill: #ffc107;
+            /* Bright gold fill */
+        }
 
-.star-icon.empty {
-  fill: #e0e0e0; /* Clean light grey placeholder fill */
-}
+        .star-icon.empty {
+            fill: #e0e0e0;
+            /* Clean light grey placeholder fill */
+        }
     </style>
 </head>
 
@@ -160,22 +163,22 @@
             return date.toLocaleDateString('en-GB');
         }
 
-function getHalfStarRating(score) {
-  const num = parseFloat(score) || 0;
-  // Clamp score strictly between 0 and 5
-  const finalScore = Math.max(0, Math.min(5, num)); 
-  let starContainer = '<div class="star-rating-wrapper">';
+        function getHalfStarRating(score) {
+            const num = parseFloat(score) || 0;
+            // Clamp score strictly between 0 and 5
+            const finalScore = Math.max(0, Math.min(5, num));
+            let starContainer = '<div class="star-rating-wrapper">';
 
-  for (let i = 1; i <= 5; i++) {
-    if (finalScore >= i) {
-      // 1. Full Star SVG
-      starContainer += `
+            for (let i = 1; i <= 5; i++) {
+                if (finalScore >= i) {
+                    // 1. Full Star SVG
+                    starContainer += `
         <svg class="star-icon full" viewBox="0 0 24 24">
           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
         </svg>`;
-    } else if (finalScore >= i - 0.5) {
-      // 2. True Half Star SVG using an internal linear gradient
-      starContainer += `
+                } else if (finalScore >= i - 0.5) {
+                    // 2. True Half Star SVG using an internal linear gradient
+                    starContainer += `
         <svg class="star-icon half" viewBox="0 0 24 24">
           <defs>
             <linearGradient id="halfGrad">
@@ -185,18 +188,18 @@ function getHalfStarRating(score) {
           </defs>
           <path fill="url(#halfGrad)" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
         </svg>`;
-    } else {
-      // 3. Empty Star SVG
-      starContainer += `
+                } else {
+                    // 3. Empty Star SVG
+                    starContainer += `
         <svg class="star-icon empty" viewBox="0 0 24 24">
           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
         </svg>`;
-    }
-  }
+                }
+            }
 
-  starContainer += '</div>';
-  return starContainer;
-}
+            starContainer += '</div>';
+            return starContainer;
+        }
 
 
         // // construct your Map
