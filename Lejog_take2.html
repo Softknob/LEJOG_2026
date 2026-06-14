@@ -252,6 +252,8 @@
 
         });
 
+        var sidebar = L.control.sidebar({ container: 'sidebar' }).addTo(map);
+
         // Load GeoJSON
         fetch('data/Stays.geojson')
             .then(response => {
@@ -289,17 +291,7 @@
                 console.error('Error loading GeoJSON:', error);
             });
 
-        // 4. Handle the click event instead of binding a popup
-        marker.on('click', function (e) {
-            // Define the content you previously had in your popup
-            var content = "<h3>London Eye</h3><p>The total cost is &pound;25.00 per ticket.</p>";
 
-            // Inject the content into the sidebar pane
-            document.getElementById('sidebar-dynamic-content').innerHTML = content;
-
-            // Open the specific tab in the sidebar
-            sidebar.open('info-tab');
-        });
 
 
         fetch('data/days.geojson')
