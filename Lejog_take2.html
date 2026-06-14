@@ -10,12 +10,12 @@
     <!-- Leaflet css -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-   
-        <!-- Leaflet JS (Must come after css) -->
+
+    <!-- Leaflet JS (Must come after css) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
-   
+
     <!-- Leaflet CSS and JS
     <link rel="stylesheet" href="https://unpkg.com" />
     <script src="https://unpkg.com"></script> -->
@@ -156,6 +156,24 @@
         .star-icon.empty {
             fill: #e0e0e0;
             /* Clean light grey placeholder fill */
+        }
+
+        /* 1. Blend the collapsed sidebar track background with your header color */
+        .leaflet-sidebar {
+            background-color: #0b356f !important;
+        }
+
+        /* 2. Style the individual icons inside the tab strip */
+        .leaflet-sidebar-tabs ul li a {
+            color: white !important;
+            background-color: transparent !important;
+        }
+
+        /* 3. Give the active or hovered tab an accent color so it stands out */
+        .leaflet-sidebar-tabs ul li.active a,
+        .leaflet-sidebar-tabs ul li a:hover {
+            color: #0b356f !important;
+            background-color: white !important;
         }
     </style>
 </head>
@@ -320,5 +338,10 @@
             .catch(error => {
                 console.error('Error loading GeoJSON:', error);
             });
+
+        // Close the sidebar automatically whenever a user clicks on an empty area of the map
+        map.on('click', function () {
+            sidebar.close();
+        });
     </script>
 </body>
