@@ -15,12 +15,12 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
     <!-- Leaflet CSS and JS -->
-<link rel="stylesheet" href="https://unpkg.com" />
-<script src="https://unpkg.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
 
-<!-- Leaflet Sidebar v2 CSS and JS -->
-<link rel="stylesheet" href="https://jsdelivr.net" />
-<script src="https://jsdelivr.net"></script>
+    <!-- Leaflet Sidebar v2 CSS and JS -->
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+    <script src="js/leaflet-sidebar.js"></script>
 
     <style>
         /* set your map container height to height 100% and width 100%
@@ -161,28 +161,28 @@
     <!-- <h1>Write an appropriate heading for your map</h1> -->
     <h1>LEJOG 2026 Story Map</h1>
     <!-- Sidebar Container -->
-<div id="sidebar" class="sidebar collapsed">
-    <!-- Tabs navigation -->
-    <div class="sidebar-tabs">
-        <ul role="tablist">
-            <li><a href="#info-tab" role="tab"><i class="fa fa-info"></i></a></li>
-        </ul>
-    </div>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Tabs navigation -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#info-tab" role="tab"><i class="fa fa-info"></i></a></li>
+            </ul>
+        </div>
 
-    <!-- Tab content panes -->
-    <div class="sidebar-content">
-        <div class="sidebar-pane" id="info-tab">
-            <h1 class="sidebar-header">
-                Location Details
-                <div class="sidebar-close"><i class="fa fa-caret-left"></i></div>
-            </h1>
-            <!-- This container will hold your dynamic popup content -->
-            <div id="sidebar-dynamic-content">
-                <p>Click a marker to view details.</p>
+        <!-- Tab content panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="info-tab">
+                <h1 class="sidebar-header">
+                    Location Details
+                    <div class="sidebar-close"><i class="fa fa-caret-left"></i></div>
+                </h1>
+                <!-- This container will hold your dynamic popup content -->
+                <div id="sidebar-dynamic-content">
+                    <p>Click a marker to view details.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <!-- insert your map container -->
     <div id="map"></div>
     <script>
@@ -274,17 +274,17 @@
                 console.error('Error loading GeoJSON:', error);
             });
 
-            // 4. Handle the click event instead of binding a popup
-marker.on('click', function (e) {
-    // Define the content you previously had in your popup
-    var content = "<h3>London Eye</h3><p>The total cost is &pound;25.00 per ticket.</p>";
-    
-    // Inject the content into the sidebar pane
-    document.getElementById('sidebar-dynamic-content').innerHTML = content;
-    
-    // Open the specific tab in the sidebar
-    sidebar.open('info-tab');
-});
+        // 4. Handle the click event instead of binding a popup
+        marker.on('click', function (e) {
+            // Define the content you previously had in your popup
+            var content = "<h3>London Eye</h3><p>The total cost is &pound;25.00 per ticket.</p>";
+
+            // Inject the content into the sidebar pane
+            document.getElementById('sidebar-dynamic-content').innerHTML = content;
+
+            // Open the specific tab in the sidebar
+            sidebar.open('info-tab');
+        });
 
 
         fetch('data/days.geojson')
