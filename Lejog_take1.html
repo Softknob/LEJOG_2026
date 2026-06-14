@@ -79,6 +79,48 @@
 
             text-align: center;
         }
+
+        /* 1. Set a wider desktop footprint for tables and restrict vertical height */
+        .desktop-popup .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        .desktop-popup .leaflet-popup-content {
+            width: 450px !important;
+            /* Wider canvas ideal for structured data columns */
+            max-height: 300px;
+            /* Strict cap to prevent extending past screen edge */
+            overflow-y: auto;
+            /* Forces vertical scrollbar when contents overflow */
+            overflow-x: hidden;
+            /* Prevents messy horizontal scrollbars */
+            padding-right: 15px;
+            /* Buffer space so content doesn't tuck behind the scrollbar */
+        }
+
+        /* 2. Ensure internal tables display correctly inside the popup */
+        .desktop-popup table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .desktop-popup th,
+        .desktop-popup td {
+            padding: 6px 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 3. Prevent images from breaking out before or after loading */
+        .desktop-popup img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 8px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
@@ -160,8 +202,13 @@
                             popupContent = `<strong>Unnamed Stay</strong>`;
 
                         }
-                        layer.bindPopup(popupContent);
-
+                        layer.bindPopup(popupContent, {
+                            className: 'desktop-popup',   // Ties layout parameters to your CSS styles
+                            maxHeight: 300,               // Caps the vertical frame boundary limits
+                            autoPan: true,                // Keeps markers viewable on screen
+                            autoPanPadding: L.point(10, 50), // Allocates a 50px buffer zone at the browser top edge
+                            keepInView: true              // Keeps popup locked within active bounds
+                        });
                     }
                 }).addTo(map);
 
