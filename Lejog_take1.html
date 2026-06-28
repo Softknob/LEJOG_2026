@@ -346,7 +346,7 @@
                             // Adjust max-width to control how wide the popup gets on screen
                             const popupHTML = `
                         <div style="text-align: center; max-width: 500px;">
-                            // <p style="margin: 0 0 5px 0; font-weight: bold;">Image ID: ${feature.properties.OBJECTID || 'Photo'}</p>
+                            <!--  <p style="margin: 0 0 5px 0; font-weight: bold;">Image ID: ${feature.properties.OBJECTID || 'Photo'}</p> -->
                             <img src="${feature.properties.src}" 
                                  alt="Uploaded Photo" 
                                  style="width: 100%; height: auto; border-radius: 4px; display: block;" />
@@ -356,8 +356,8 @@
                             // 3. Bind the HTML layout to the marker point
                             // We set minWidth and maxWidth so the box fits the image neatly
                             layer.bindPopup(popupHTML, {
-                                maxWidth: 270,
-                                minWidth: 200
+                                maxWidth: 500,
+                                minWidth: 400
                             });
                         }
                     }
