@@ -293,7 +293,17 @@
                 return response.json();
             })
             .then(data => {
-                var geojsonLayer = L.geoJSON(data).addTo(map);
+                var geojsonLayer = L.geoJSON(data, {
+                    onEachFeature: function (feature, layer) {
+                        // Check if your GeoJSON properties exist before using them
+                        if (feature.properties && feature.properties.name) {
+                            // Bind the popup to this specific line item
+                            layer.bindPopup(`<b>Name:</b> ${feature.properties.name}`);
+                        } else {
+                            layer.bindPopup("This line has no name property.");
+                        }
+                    }
+                }).addTo(map);
 
                 // Zoom to layer
                 map.fitBounds(geojsonLayer.getBounds());
