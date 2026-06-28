@@ -214,8 +214,17 @@
 
         L.tileLayer.provider('Esri.NatGeoWorldMap').addTo(map);
 
+        // the marker icons
         var roomIcon = L.icon({
             iconUrl: "images/noun-hotel-2673741.svg",
+            iconSize: [20, 20],
+            iconAnchor: [10, 10],
+            popupAnchor: [0, 0]
+
+        });
+
+        var cameraIcon = L.icon({
+            iconUrl: "images\camera.svg",
             iconSize: [20, 20],
             iconAnchor: [10, 10],
             popupAnchor: [0, 0]
@@ -324,6 +333,9 @@
             .then(data => {
                 // Create the Leaflet GeoJSON layer
                 var photoLayer = L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, { icon: cameraIcon });
+                    },
                     // This function runs on every single point item in your file
                     onEachFeature: function (feature, layer) {
 
@@ -333,8 +345,8 @@
                             // 2. Build the HTML block for inside the popup box
                             // Adjust max-width to control how wide the popup gets on screen
                             const popupHTML = `
-                        <div style="text-align: center; max-width: 250px;">
-                            <p style="margin: 0 0 5px 0; font-weight: bold;">Image ID: ${feature.properties.OBJECTID || 'Photo'}</p>
+                        <div style="text-align: center; max-width: 500px;">
+                            // <p style="margin: 0 0 5px 0; font-weight: bold;">Image ID: ${feature.properties.OBJECTID || 'Photo'}</p>
                             <img src="${feature.properties.src}" 
                                  alt="Uploaded Photo" 
                                  style="width: 100%; height: auto; border-radius: 4px; display: block;" />
