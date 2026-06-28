@@ -222,7 +222,7 @@
 
         });
 
-        // Load GeoJSON
+        // Load the hotels
         fetch('data/Stays.geojson')
             .then(response => {
                 if (!response.ok) {
@@ -285,6 +285,7 @@
             });
 
 
+        // Load the routes
         fetch('data/days_d.geojson')
             .then(response => {
                 if (!response.ok) {
@@ -310,6 +311,45 @@
             })
             .catch(error => {
                 console.error('Error loading GeoJSON:', error);
+            });
+
+        // load the photos
+        fetch('data/photos.geojson')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Create the Leaflet GeoJSON layer
+                var photoLayer = L.geoJSON(data, {
+                    // This function runs on every single point item in your file
+                    onEachFeature: function (feature, layer) {
+
+                        // 1. Verify that properties and the 'src' key exist
+                        if (feature.properties && feature.properties.src) {
+
+                            // 2. Build the HTML block for inside the popup box
+                            // Adjust max-width to control how wide the popup gets on screen
+                            const popupHTML = `
+                        <div style="text-align: center; max-width: 250px;">
+                            <p style="margin: 0 0 5px 0; font-weight: bold;">Image ID: ${feature.properties.OBJECTID || 'Photo'}</p>
+                            <img src="${feature.properties.src}" 
+                                 alt="Uploaded Photo" 
+                                 style="width: 100%; height: auto; border-radius: 4px; display: block;" />
+                        </div>
+                    `;
+
+                            // 3. Bind the HTML layout to the marker point
+                            // We set minWidth and maxWidth so the box fits the image neatly
+                            layer.bindPopup(popupHTML, {
+                                maxWidth: 270,
+                                minWidth: 200
+                            });
+                        }
+                    }
+                }).addTo(map);
             });
     </script>
 </body>
