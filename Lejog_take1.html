@@ -285,7 +285,7 @@
             });
 
 
-        fetch('data/days.geojson')
+        fetch('data/days_d.geojson')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -296,9 +296,9 @@
                 var geojsonLayer = L.geoJSON(data, {
                     onEachFeature: function (feature, layer) {
                         // Check if your GeoJSON properties exist before using them
-                        if (feature.properties && feature.properties.name) {
+                        if (feature.properties && feature.properties.Title) {
                             // Bind the popup to this specific line item
-                            layer.bindPopup(`<b>Name:</b> ${feature.properties.Name}`);
+                            layer.bindPopup(`<b>Name:</b> ${feature.properties.Title}`);
                         } else {
                             layer.bindPopup("This line has no name property.");
                         }
