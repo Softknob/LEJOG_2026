@@ -298,7 +298,7 @@
                         // Check if your GeoJSON properties exist before using them
                         if (feature.properties && feature.properties.name) {
                             // Bind the popup to this specific line item
-                            layer.bindPopup(`<b>Name:</b> ${feature.properties.name}`);
+                            layer.bindPopup(`<b>Name:</b> ${feature.properties.Name}`);
                         } else {
                             layer.bindPopup("This line has no name property.");
                         }
