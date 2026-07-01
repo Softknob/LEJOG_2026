@@ -309,10 +309,10 @@
                         if (feature.properties && feature.properties.Title) {
                             // Bind the popup to this specific line item
                             layer.bindPopup(`
-                            <b>Name:</b> ${feature.properties.Title}<br>
-                            <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
-                            style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
-                                        <table>
+                    <b>Name:</b> ${feature.properties.Title}<br>
+                    <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
+                    style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+                    <table>
                     <thead>
                         <tr>
                         <th></th>
@@ -320,20 +320,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Date</td><td>${feature.properties.Date}</td></tr>
-                        <tr><td>Distance</td><td>${feature.properties.Distance} km</td></tr>
-                        <tr><td>Elevation</td><td>${feature.properties.Elevation_gain} m</td></tr>
-                        <tr><td>Speed</td><td>${feature.properties.Avg_speed} km/h</td></tr>
-                        <tr><td>HR</td><td>${feature.properties.Avg_Hr} bpm</td></tr>
-                        <tr><td>Wind direction</td><td>${feature.properties.Wind_Direction}</td></tr>
+                        <tr><td>Date</td><td>${feature.properties.Date}</td>
+                        <td>Distance</td><td>${feature.properties.Distance} km</td></tr>
+                        <tr><td>Elevation</td><td>${feature.properties.Elevation_gain} m</td>
+                        <td>Speed</td><td>${feature.properties.Avg_speed} km/h</td></tr>
+                        <tr><td>HR</td><td>${feature.properties.Avg_Hr} bpm</td>
+                        <td>Wind direction</td><td>${feature.properties.Wind_Direction}</td></tr>
                         <tr><td>Wind speed</td><td>${feature.properties.Wind_Speed} km/h</td></tr>
-                        <tr><td>Notes</td><td>${feature.properties.Description}</td></tr>
+                        <tr><td colspan="2" style="padding-top: 10px;">Notes</td><td>${feature.properties.Description}</td></tr>
                     </tbody>
                     </table>
                             `,
                             {
-                                maxWidth:450,
-                                minWidth:350
+                                maxWidth:500,
+                                minWidth:400
                             }
                         );
                         } else {
