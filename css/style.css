@@ -169,12 +169,12 @@ h1 {
 
 /* Full Width Notes Row Adjustments */
 .metrics-table .notes-cell {
+    display: table-caption; /* 👈 CRITICAL: Breaks out of the 50/50 grid layout */
+    caption-side: bottom;   /* Forces the element to render at the bottom of the table */
     width: 100%;
     padding: 12px 0 4px 0;
-    border-bottom: none;
-    /* Removes the line for the final row */
-    text-align: left;
-    /* Counteracts the last-child alignment rule */
+    border-bottom: none; 
+    text-align: left; 
 }
 
 .notes-header {
