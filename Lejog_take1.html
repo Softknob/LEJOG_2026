@@ -330,7 +330,12 @@
                         <tr><td>Notes</td><td>${feature.properties.Description}</td></tr>
                     </tbody>
                     </table>
-                            `);
+                            `,
+                            {
+                                maxWidth:450,
+                                minWidth:350
+                            }
+                        );
                         } else {
                             layer.bindPopup("This line has no name property.");
                         }
