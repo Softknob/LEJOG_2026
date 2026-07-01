@@ -195,13 +195,14 @@
                         <tr><td>HR</td><td>${feature.properties.Avg_Hr} bpm</td>
                         <td>Wind direction</td><td>${feature.properties.Wind_Direction}</td></tr>
                         <tr><td>Wind speed</td><td>${feature.properties.Wind_Speed} km/h</td></tr>
-                        <tr><td colspan="2" class="notes-cell">
+                    </tbody>
+                    </table>
+                    <div class="notes-container">
                         <span class="notes-header">Notes</span>
                         <div class="notes-box">
                             ${feature.properties.Description || 'No notes recorded for this activity.'}
-                        </div></td></tr>
-                    </tbody>
-                    </table>
+                        </div>
+                    </div>
                             `,
                             {
                                 maxWidth:500,
