@@ -310,7 +310,7 @@
                             // Bind the popup to this specific line item
                             layer.bindPopup(`
                             <b>Name:</b> ${feature.properties.Title}<br>
-                            <img src="images/Profile_S${(data.properties.OBJECTID) - 2}.png" alt="image"
+                            <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
                             style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
                             `);
                         } else {
