@@ -312,6 +312,23 @@
                             <b>Name:</b> ${feature.properties.Title}<br>
                             <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
                             style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+                                        <table>
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Date</td><td>${feature.properties.Date}</td></tr>
+                        <tr><td>Distance</td><td>${feature.properties.Distance} km</td></tr>
+                        <tr><td>Elevation</td><td>${feature.properties.Elevation_gain} m</td></tr>
+                        <tr><td>Speed</td><td>${feature.properties.Avg_speed} km/h</td></tr>
+                        <tr><td>HR</td><td>${feature.properties.Avg_Hr} bpm</td></tr>
+                        <tr><td>Wind direction</td><td>${feature.properties.Wind_Direction}</td></tr>
+                        <tr><td>Wind speed</td><td>${feature.properties.Wind_Speed} km/h</td></tr>
+                    </tbody>
+                    </table>
                             `);
                         } else {
                             layer.bindPopup("This line has no name property.");
