@@ -120,8 +120,7 @@
                         if (feature.properties && feature.properties.Name) {
                             popupContent = `
                 <strong>${feature.properties.Name}</strong><br>
-                <img src="images/${feature.properties.img}" alt="image"
-                style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+                <img src="images/${feature.properties.img}" alt="image" class="popup-image">
                   <table>
                     <thead>
                         <tr>
@@ -180,8 +179,7 @@
                             // Bind the popup to this specific line item
                             layer.bindPopup(`
                     <b>Name:</b> ${feature.properties.Title}<br>
-                    <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
-                    style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+                    <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image" class="popup-image">
                     <table class="metrics-table">
                     <thead>
                         <tr>
