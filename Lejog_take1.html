@@ -15,138 +15,8 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js"></script>
 
-    <style>
-        /* set your map container height to height 100% and width 100%
-    
-   
+     <link rel="stylesheet" href="css/style.css">
 
-        /* css written for you */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #0b356f;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-
-        }
-
-        .leaflet-control-layers {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-            padding: 6px 10px;
-        }
-
-        .leaflet-control-layers-toggle {
-            background-color: white;
-        }
-
-        .leaflet-control-layers-expanded {
-            padding: 6px 10px 6px 6px;
-            font-size: 14px;
-            background-color: white;
-        }
-
-        /* Styles for info panel */
-        .info {
-            padding: 6px 8px;
-            font: 14px/16px Arial, Helvetica, sans-serif;
-            background: white;
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-
-        .info h4 {
-            margin: 0 0 5px;
-            color: #777;
-        }
-
-        #map {
-            height: 780px;
-            width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        h1 {
-
-            text-align: center;
-        }
-
-        /* 1. Set a wider desktop footprint for tables and restrict vertical height */
-        .desktop-popup .leaflet-popup-content-wrapper {
-            border-radius: 8px;
-            padding: 5px;
-        }
-
-        .desktop-popup .leaflet-popup-content {
-            width: 450px !important;
-            /* Wider canvas ideal for structured data columns */
-            max-height: 600px;
-            /* Strict cap to prevent extending past screen edge */
-            overflow-y: auto;
-            /* Forces vertical scrollbar when contents overflow */
-            overflow-x: hidden;
-            /* Prevents messy horizontal scrollbars */
-            padding-right: 15px;
-            /* Buffer space so content doesn't tuck behind the scrollbar */
-        }
-
-        /* 2. Ensure internal tables display correctly inside the popup */
-        .desktop-popup table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 13px;
-        }
-
-        .desktop-popup th,
-        .desktop-popup td {
-            padding: 6px 8px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* 3. Prevent images from breaking out before or after loading */
-        .desktop-popup img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 8px;
-            border-radius: 4px;
-        }
-
-        /* Container arrangement layout */
-        .star-rating-wrapper {
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-            /* Clean spacing between star elements */
-        }
-
-        /* Base structural sizing for star nodes */
-        .star-icon {
-            width: 16px;
-            height: 16px;
-        }
-
-        /* Colour definitions */
-        .star-icon.full {
-            fill: #ffc107;
-            /* Bright gold fill */
-        }
-
-        .star-icon.empty {
-            fill: #e0e0e0;
-            /* Clean light grey placeholder fill */
-        }
-    </style>
 </head>
 
 <body>
@@ -312,7 +182,7 @@
                     <b>Name:</b> ${feature.properties.Title}<br>
                     <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image"
                     style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
-                    <table>
+                    <table class="metrics-table">
                     <thead>
                         <tr>
                         <th></th>
@@ -327,7 +197,11 @@
                         <tr><td>HR</td><td>${feature.properties.Avg_Hr} bpm</td>
                         <td>Wind direction</td><td>${feature.properties.Wind_Direction}</td></tr>
                         <tr><td>Wind speed</td><td>${feature.properties.Wind_Speed} km/h</td></tr>
-                        <tr><td colspan="2" style="padding-top: 10px;">Notes</td><td>${feature.properties.Description}</td></tr>
+                        <tr><td colspan="2" class="notes-cell">
+                        <span class="notes-header">Notes</span>
+                        <div class="notes-box">
+                            ${feature.properties.Description || 'No notes recorded for this activity.'}
+                        </div></td></tr>
                     </tbody>
                     </table>
                             `,
