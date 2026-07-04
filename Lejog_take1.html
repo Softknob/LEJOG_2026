@@ -178,7 +178,7 @@
                         if (feature.properties && feature.properties.Title) {
                             // Bind the popup to this specific line item
                             layer.bindPopup(`
-                    <b>Name:</b> ${feature.properties.Descript}<br>
+                    <b>${feature.properties.Descript}</b><br>
                     <img src="images/Profile_S${(feature.properties.OBJECTID) - 2}.png" alt="image" class="popup-image">
                     <table class="metrics-table">
                     <thead>
@@ -188,16 +188,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Date</td><td class="td-val">${feature.properties.Distance}</td>
-                        <td>Distance</td><td class="td-val">${feature.properties.Elevation_gain} km</td></tr>
-                        <tr><td>Elevation</td><td class="td-val">${feature.properties.Avg_speed} m</td>
-                        <td>Speed</td><td class="td-val">${feature.properties.Avg_Hr} km/h</td></tr>
-                        <tr><td>HR</td><td class="td-val">${feature.properties.Wind_Direction} bpm</td>
-                        <td>Wind direction</td><td class="td-val">${feature.properties.Wind_speed}</td></tr>
-                        <tr><td>Wind speed</td><td class="td-val">${feature.properties.Temp} km/h</td>
-                        <td>Wind direction</td><td class="td-val">${feature.properties.Effort}</td></tr>
-                        <tr><td>Total time</td><td class="td-val">${feature.properties.total_time} km/h</td>
-                        <td>Moving time</td><td class="td-val">${feature.properties.Moving_time}</td></tr>
+                        <tr><td>Distance</td><td class="td-val">${feature.properties.Distance} km</td>
+                        <td>Elevation</td><td class="td-val">${feature.properties.Elevation_gain} m</td></tr>
+                        <tr><td>Avg Speed</td><td class="td-val">${feature.properties.Avg_speed} km/h</td>
+                        <td>Avg Hr</td><td class="td-val">${feature.properties.Avg_Hr} bpm</td></tr>
+                        <tr><td>Wind Direction</td><td class="td-val">${feature.properties.Wind_Direction}</td>
+                        <td>Wind Speed</td><td class="td-val">${feature.properties.Wind_Speed} km/h</td></tr>
+                        <tr><td>Avg Temp</td><td class="td-val">${feature.properties.Temp} C</td>
+                        <td>Effort</td><td class="td-val">${feature.properties.Effort}</td></tr>
+                        <tr><td>Total time</td><td class="td-val">${feature.properties.total_time} h</td>
+                        <td>Moving time</td><td class="td-val">${feature.properties.Moving_time} h</td></tr>
                     </tbody>
                     </table>
                     <div class="notes-container">
