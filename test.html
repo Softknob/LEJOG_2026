@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="output">
+        shit
+    </div>
+
+    <script>
+     data =    {
+            "properties": {
+                "OBJECTID": 9,
+                "Name": "Luton Road Cycling",
+                "Descript": "day17",
+                "Date": "13/05/2026",
+                "Title": "Rental Return",
+                "Distance": 28.899999999999999,
+                "start_time": "08:41:00",
+                "total_time": "01:20:00",
+                "Moving_time": "01:18:00",
+                "Avg_speed": 22,
+                "Max_speed": 39.399999999999999,
+                "Avg_Hr": 94,
+                "Effort": 12,
+                "Elevation_gain": 246,
+                "Temp": 9,
+                "Wind_Direction": "W",
+                "Wind_Speed": 20.5,
+                "Description": "The drive to Luton was incredibly busy, and there was no way I could ride on the lower luton road where Eddie used to live. Fortunately Garmin found a cycle path that parallel s the road from Luton to Harpenden, then it was on to the back end of St Albans and I knew my way home from there, back through Welham green they way I had started over 2 week earlier",
+                "Shape_Length": 0.33656305889351151
+            }
+        }
+        
+    
+
+    
+        // // Extract the raw text content from the JSON script tag
+        // const jsonText = document.getElementById('json-data').textContent;
+
+        // // Convert the string into a usable JavaScript object
+        // const feature = JSON.parse(jsonText);
+
+        // Render the data
+        document.getElementById('output').innerHTML = `
+            <h2>Name: ${data.properties.Name}</h2>
+             <img src="images/Profile_S${(data.properties.OBJECTID)-1}.png" alt="image"
+                style="width:100%; max-width:1000px; height:auto; margin-top:8px; border-radius:4px">
+            <table>
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Date</td><td>${data.properties.Date}</td>
+                        <td>Distance</td><td>${data.properties.Distance} km</td></tr>
+                        <tr><td>Elevation</td><td>${data.properties.Elevation_gain} m</td>
+                        <td>Speed</td><td>${data.properties.Avg_speed} km/h</td></tr>
+                        <tr><td>HR</td><td>${data.properties.Avg_Hr} bpm</td>
+                        <td>Wind direction</td><td>${data.properties.Wind_Direction}</td></tr>
+                        <tr><td colspan="2" style="padding-top: 10px;">Wind speed</td><td>${data.properties.Wind_Speed} km/h</td></tr>
+                    </tbody>
+                    </table>
+        `,
+                            {
+                                maxWidth:500,
+                                minWidth:400
+                            };
+
+
+console.log(activityName); // Outputs: Luton Road Cycling
+    </script>
+
+
+</body>
+
+</html>
