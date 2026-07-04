@@ -157,19 +157,19 @@ h1 {
 /* Explicit layout widths for the 4 columns */
 .metrics-table th:nth-child(1),
 .metrics-table th:nth-child(3) {
-    width: 30%; /* Balanced width for the metrics labels */
+    width: 20%; /* Balanced width for the metrics labels */
 }
 
 .metrics-table th:nth-child(2),
 .metrics-table th:nth-child(4) {
-    width: 20%; /* Proportional width for the values */
+    width: 30%; /* Proportional width for the values */
 }
 
 /* Labels: Columns 1 and 3 */
 .td-lbl {
     text-align: left; 
-    font-weight: 600; 
-    color: #666;
+    font-weight: 400;     /* 3. Lighter weight so values stand out */
+    color: #777;          /* Softened gray to create visual contrast */
     padding-right: 12px; /* Leaves a crisp gap before the data value */
 }
 
@@ -177,6 +177,8 @@ h1 {
 .td-val {
     text-align: left; /* Explicitly forces values to align left */
     padding-right: 20px; /* Separates the first data block from the second data block */
+    font-weight: 600;     /* 3. Bolder weight so the actual data draws the eye */
+    color: #111;          /* Darker text color for maximum legibility */
 }
 
 /* Your original Notes block code remains perfectly intact below */
