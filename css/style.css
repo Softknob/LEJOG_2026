@@ -167,7 +167,7 @@ h1 {
 
 /* Labels: Columns 1 and 3 */
 .td-lbl {
-    text-align: right; 
+    text-align: left; 
     font-weight: 600; 
     color: #666;
     padding-right: 12px; /* Leaves a crisp gap before the data value */
