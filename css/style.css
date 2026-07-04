@@ -196,3 +196,8 @@ h1 {
 .td-val{
       text-align: left;
 }
+.td-lbl {
+    text-align: right;
+    font-weight: bold; /* Optional: makes labels pop */
+    padding-right: 8px; /* Adds a nice gap before the value */
+}
