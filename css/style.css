@@ -139,7 +139,7 @@ h1 {
 /* Table Framework */
 .metrics-table {
     width: 100%; 
-    table-layout: fixed; /* Safely forces 50/50 split on columns */
+    table-layout: fixed; /* Safely handles fixed percentages */
     border-collapse: collapse; 
     margin-top: 12px; 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
@@ -147,26 +147,39 @@ h1 {
     color: #333;
 }
 
-/* Force Equal 50/50 Columns and Row Dividers */
+/* Base styling and dividers for all 4 cells */
 .metrics-table td {
-    width: 50%; 
     padding: 6px 0; 
     border-bottom: 1px solid #eee;
     box-sizing: border-box;
 }
 
-/* Left Column Styling (Labels) */
-.metrics-table td:first-child {
+/* Explicit layout widths for the 4 columns */
+.metrics-table th:nth-child(1),
+.metrics-table th:nth-child(3) {
+    width: 30%; /* Balanced width for the metrics labels */
+}
+
+.metrics-table th:nth-child(2),
+.metrics-table th:nth-child(4) {
+    width: 20%; /* Proportional width for the values */
+}
+
+/* Labels: Columns 1 and 3 */
+.td-lbl {
+    text-align: right; 
     font-weight: 600; 
     color: #666;
+    padding-right: 12px; /* Leaves a crisp gap before the data value */
 }
 
-/* Right Column Styling (Values) */
-.metrics-table td:last-child {
-    text-align: right;
+/* Values: Columns 2 and 4 */
+.td-val {
+    text-align: left; /* Explicitly forces values to align left */
+    padding-right: 20px; /* Separates the first data block from the second data block */
 }
 
-/* New Clean Layout for Notes Block */
+/* Your original Notes block code remains perfectly intact below */
 .notes-container {
     width: 100%;
     margin-top: 14px;
@@ -192,12 +205,4 @@ h1 {
     padding: 8px; 
     border-radius: 4px; 
     border-left: 3px solid #ccc;
-}
-.td-val{
-      text-align: left;
-}
-.td-lbl {
-    text-align: right;
-    font-weight: bold; /* Optional: makes labels pop */
-    padding-right: 8px; /* Adds a nice gap before the value */
 }
