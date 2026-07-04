@@ -193,3 +193,6 @@ h1 {
     border-radius: 4px; 
     border-left: 3px solid #ccc;
 }
+.td-val{
+      text-align: left;
+}
